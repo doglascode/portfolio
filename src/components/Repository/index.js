@@ -2,9 +2,7 @@ import { StyledRepository, TagsContainer } from './styles';
 import LinkButton from '../LinkButton';
 
 export default function Repository({ repository }) {
-  const { name, description, topics, html_url } = repository;
-
-  const websiteUrl = `https://doglascode.github.io/${name}`;
+  const { name, description, topics, html_url, homepage } = repository;
 
   return (
     <StyledRepository>
@@ -24,8 +22,8 @@ export default function Repository({ repository }) {
 
       <div className="actions">
         <LinkButton href={html_url}>GitHub</LinkButton>
-        {!description.toLowerCase().includes('react') && (
-          <LinkButton href={websiteUrl}>Website</LinkButton>
+        {homepage && (
+          <LinkButton href={homepage}>Website</LinkButton>
         )}
       </div>
     </StyledRepository>
