@@ -19,6 +19,7 @@ export const Container = styled.div`
 
 export const RepositoriesContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
   gap: 20px;
 
